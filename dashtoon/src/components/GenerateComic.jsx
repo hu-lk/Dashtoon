@@ -1,6 +1,6 @@
 
-//api key
-const api_key = process.env.API_URL;
+// const api_key = process.env.API_URL;
+const API_URL = 'https://xdwvg9no7pefghrn.us-east-1.aws.endpoints.huggingface.cloud';
 
 // image generation for all panel inputs
 const generateComic = async (texts, setComicImages) => {
@@ -8,7 +8,7 @@ const generateComic = async (texts, setComicImages) => {
     const imageArray = [];
 
     for (const text of texts) {
-      const response = await fetch(api_key, {
+      const response = await fetch(API_URL, {
         method: 'POST',
         headers: {
           Accept: 'image/png',
